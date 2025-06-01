@@ -38,6 +38,9 @@ scanf (" %d", &Populacao_1);
 printf("Area:");
 scanf (" %f", &Area_1);
 
+printf("PIB:");
+scanf (" %f", &PIB_1);
+
 printf("NUmero_de_pontos_turisticos:");
 scanf (" %d", &Numero_de_pontos_turisticos_1);
 
@@ -58,6 +61,9 @@ scanf (" %d", &Populacao_2);
 
 printf("Area:");
 scanf (" %f", &Area_2);
+
+printf("PIB:");
+scanf (" %f", &PIB_2);
 
 printf("Numero_de_pontos_turisticos:");
 scanf (" %d", &Numero_de_pontos_turisticos_2);
