@@ -79,28 +79,49 @@ PIB_per_Capita_1 = PIB_1 * 1000000000 / Populacao_1;
 Densidade_2 = Populacao_2 / Area_2;
 PIB_per_Capita_2 = PIB_2 * 1000000000 / Populacao_2;
 
-// exibição carta 1
-printf("Carta_1:\n");
+// cálculo do Super Poder
+float Super_Poder_1 = Populacao_1 + Area_1 + PIB_1 + Numero_de_pontos_turisticos_1 + (1 / Densidade_1) + PIB_per_Capita_1;
+float Super_Poder_2 = Populacao_2 + Area_2 + PIB_2 + Numero_de_pontos_turisticos_2 + (1 / Densidade_2) + PIB_per_Capita_2;
+
+// exibição dos dados
+printf("RESULTADO DAS CARTAS\n");
+
+// Carta 1
+printf("\nCarta_1:\n");
 printf("Estado: %c\n", Estado_1);
 printf("Código: %s\n", Codigo_da_carta_1);
 printf("Nome da Cidade: %s\n", Nome_da_cidade_1);
 printf("População: %d\n", Populacao_1);
 printf("Área: %.2f km²\n", Area_1);
-printf("PIB: %.2f bilhões de reais\n", PIB_1);
-printf("Número de Pontos Turísticos: %d\n", Numero_de_pontos_turisticos_1);
-printf("Densidade Populacional: %.2f hab/km²\n", Densidade_1);
-printf("PIB per Capita: %.2f reais\n", PIB_per_Capita_1);
+printf("PIB: %.2f bilhões\n", PIB_1);
+printf("Pontos Turísticos: %d\n", Numero_de_pontos_turisticos_1);
+printf("Densidade: %.2f hab/km²\n", Densidade_1);
+printf("PIB per Capita: %.2f\n", PIB_per_Capita_1);
+printf("Super Poder: %.2f\n", Super_Poder_1);
 
-// exibição carta 2
-printf("Carta_2:\n");
+// Carta 2
+printf("\nCarta_2:\n");
 printf("Estado: %c\n", Estado_2);
 printf("Código: %s\n", Codigo_da_carta_2);
 printf("Nome da Cidade: %s\n", Nome_da_cidade_2);
 printf("População: %d\n", Populacao_2);
 printf("Área: %.2f km²\n", Area_2);
-printf("PIB: %.2f bilhões de reais\n", PIB_2);
-printf("Número de Pontos Turísticos: %d\n", Numero_de_pontos_turisticos_2);
-printf("Densidade Populacional: %.2f hab/km²\n", Densidade_2);
-printf("PIB per Capita: %.2f reais\n", PIB_per_Capita_2);
+printf("PIB: %.2f bilhões\n", PIB_2);
+printf("Pontos Turísticos: %d\n", Numero_de_pontos_turisticos_2);
+printf("Densidade: %.2f hab/km²\n", Densidade_2);
+printf("PIB per Capita: %.2f\n", PIB_per_Capita_2);
+printf("Super Poder: %.2f\n", Super_Poder_2);
+
+// comparação de atributos (1 = carta 1 vence, 0 = carta 2 vence)
+printf("\n===== COMPARAÇÃO ENTRE CARTAS =====\n");
+
+printf("População: %d\n", Populacao_1 > Populacao_2);
+printf("Área: %d\n", Area_1 > Area_2);
+printf("PIB: %d\n", PIB_1 > PIB_2);
+printf("Pontos Turísticos: %d\n", Numero_de_pontos_turisticos_1 > Numero_de_pontos_turisticos_2);
+printf("Densidade (vence menor): %d\n", Densidade_1 < Densidade_2);
+printf("PIB per Capita: %d\n", PIB_per_Capita_1 > PIB_per_Capita_2);
+printf("Super Poder: %d\n", Super_Poder_1 > Super_Poder_2);
+
 return 0;
 }
