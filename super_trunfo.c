@@ -10,6 +10,8 @@ int Populacao_1;
 float Area_1;
 float PIB_1;
 int Numero_de_pontos_turisticos_1;
+float Densidade_1;
+float PIB_per_Capita_1;
 
 //cadastro de variaveis carta 2
 char Estado_2;
@@ -19,6 +21,8 @@ int Populacao_2;
 float Area_2;
 float PIB_2;
 int Numero_de_pontos_turisticos_2;
+float Densidade_2;
+float PIB_per_Capita_2;
 
 // Descrição de dados da carta 1
 printf("Carta_1:\n");
@@ -68,25 +72,35 @@ scanf (" %f", &PIB_2);
 printf("Numero_de_pontos_turisticos:");
 scanf (" %d", &Numero_de_pontos_turisticos_2);
 
-// Exibição das cartas 1
+// calculos
+Densidade_1 = Populacao_1 / Area_1;
+PIB_per_Capita_1 = PIB_1 * 1000000000 / Populacao_1;
+
+Densidade_2 = Populacao_2 / Area_2;
+PIB_per_Capita_2 = PIB_2 * 1000000000 / Populacao_2;
+
+// exibição carta 1
 printf("Carta_1:\n");
-printf("Estado: %c\n",Estado_1);
+printf("Estado: %c\n", Estado_1);
 printf("Código: %s\n", Codigo_da_carta_1);
 printf("Nome da Cidade: %s\n", Nome_da_cidade_1);
-printf("População: %d\n",Populacao_1);
+printf("População: %d\n", Populacao_1);
 printf("Área: %.2f km²\n", Area_1);
 printf("PIB: %.2f bilhões de reais\n", PIB_1);
 printf("Número de Pontos Turísticos: %d\n", Numero_de_pontos_turisticos_1);
+printf("Densidade Populacional: %.2f hab/km²\n", Densidade_1);
+printf("PIB per Capita: %.2f reais\n", PIB_per_Capita_1);
 
-// Exibição das cartas 2
+// exibição carta 2
 printf("Carta_2:\n");
-printf("Estado: %c\n",Estado_2);
+printf("Estado: %c\n", Estado_2);
 printf("Código: %s\n", Codigo_da_carta_2);
 printf("Nome da Cidade: %s\n", Nome_da_cidade_2);
-printf("População: %d\n",Populacao_2);
+printf("População: %d\n", Populacao_2);
 printf("Área: %.2f km²\n", Area_2);
 printf("PIB: %.2f bilhões de reais\n", PIB_2);
 printf("Número de Pontos Turísticos: %d\n", Numero_de_pontos_turisticos_2);
-
+printf("Densidade Populacional: %.2f hab/km²\n", Densidade_2);
+printf("PIB per Capita: %.2f reais\n", PIB_per_Capita_2);
 return 0;
 }
